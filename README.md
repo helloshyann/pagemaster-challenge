@@ -1,1 +1,1 @@
-# js-template
+# Pagemaster Coding Challenge
