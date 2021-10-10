@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>APP NAME by Shyann Jobe</title>
+    <title>Pagemaster by Shyann Jobe</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -37,7 +37,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.html">
                 <img src="img/mark-white.png" class="d-inline-block aligin-text-top" height="35"> 
-                APP NAME
+                Pagemaster
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,7 @@
                         <a class="nav-link active" href="/code.html">The Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank">The Repo</a>
+                        <a class="nav-link" href="https://github.com/helloshyann/pagemaster-challenge" target="_blank">The Repo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://helloshyann.com" target="_blank">Portfolio</a>
@@ -75,7 +75,7 @@
         <div class="container px-5 my-5">
             <div class="card text-center p-3">
                 <h1 class="fw-bolder animate__animated animate__bounceIn">View the Code</h1>
-                <p class="lead fw-normal text-muted mb-0">A simple way to view how this program was written.</p>
+                <p class="lead fw-normal text-muted mb-0">A simple way to view see this program was written.</p>
             </div>
 
             <hr>
@@ -83,23 +83,32 @@
             <div class="row row-cols-1 gx-5">
                 <!-- Code Accordion 1-->
                 <div class="col col-md-8">                   
-                    <h2 class="fw-bolder mb-3">JavaScript, HTML, & CSS</h2>
+                    <h2 class="fw-bolder mb-3">JavaScript Functions</h2>
                     <div class="accordion mb-5" id="accordionExample">
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">JavaScript</button></h3>
+                            <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                function longestWord()
+                            </button></h3>
                             <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
                                     <pre class="line-numbers">
                                         <code class="language-javascript">
-                                            //Get starting values from the DOM
-                                            //Controller function
-                                            function displayMessage(){
-                                                let msg = "";
                                             
-                                                msg = document.getElementById("message").value;
+                                            function longestWord(text) {
+                                                
+                                                let bookSplit = text.split(' ')
+                                                let maxCharacters = 0
+                                                let wordoutput = ''
                                             
-                                                Swal.fire(msg);
+                                                for (let i = 0; i < bookSplit.length; i++) {
+                                                    if (bookSplit[i].length > maxCharacters) {
+                                                        maxCharacters = bookSplit[i].length
+                                                        wordoutput = bookSplit[i]
+                                                    }
+                                                }
+                                            
+                                                return wordoutput;
                                             }
                                             
                                         </code>
@@ -109,21 +118,34 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">HTML 5</button></h3>
+                            <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                const aliceInWonderland
+                            </button></h3>
                             <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
                                     <pre class="line-numbers">
                                         <code class="language-javascript">
-                                            //Get starting values from the DOM
-                                            //Controller function
-                                            function displayMessage(){
-                                                let msg = "";
                                             
-                                                msg = document.getElementById("message").value;
+                                            document.getElementById("Alicebtn").addEventListener("click", function () {
+
+                                                const book1 = `Alice was beginning to get very tired of sitting by her sister on the
+                                                bank, and of having nothing to do: once or twice she had peeped into
+                                                the book her sister was reading, but it had no pictures or
+                                                conversations in it, &ldquoand what is the use of a book,&rdquo; thought Alice
+                                                &ldquowithout pictures or conversations?&rdquo; 
+                                                So she was considering in her own mind (as well as she could, for the
+                                                hot day made her feel very sleepy and stupid), whether the pleasure of
+                                                making a daisy-chain would be worth the trouble of getting up and
+                                                picking the daisies, when suddenly a White Rabbit with pink eyes ran
+                                                close by her.`;
                                             
-                                                Swal.fire(msg);
-                                            }
+                                                let search1 = longestWord(book1);
+                                            
+                                                document.getElementById("bookoutput").innerHTML = search1;
+                                            
+                                            })
+                                            
                                             
                                         </code>
                                     </pre>
@@ -132,21 +154,103 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">CSS 3</button></h3>
+                            <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                const harryPotter
+                            </button></h3>
                             <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
                                     
                                     <pre class="line-numbers">
                                         <code class="language-javascript">
-                                            //Get starting values from the DOM
-                                            //Controller function
-                                            function displayMessage(){
-                                                let msg = "";
                                             
-                                                msg = document.getElementById("message").value;
+                                            document.getElementById("Harrybtn").addEventListener("click", function () {
+
+                                                const book2 = `Mr. and Mrs. Dursley, of number four, Privet Drive, were proud to 
+                                                say that they were perfectly normal, thank you very much. They were the last people you'd expect to be 
+                                                involved in anything strange or mysterious, because they just didn't hold with such nonsense. 
+                                                Mr. Dursley was the director of a firm called Grunnings, which made drills. He was a big, beefy 
+                                                man with hardly any neck, although he did have a very large mustache. 
+                                                Mrs. Dursley was thin and blonde and had nearly twice the usual amount of neck, 
+                                                which came in very useful as she spent so much of her time craning over garden fences, 
+                                                spying on the neighbors. The Dursleys had a small son called Dudley and in their opinion 
+                                                there was no finer boy anywhere.`;
                                             
-                                                Swal.fire(msg);
-                                            }
+                                                let search2 = longestWord(book2);
+                                            
+                                                document.getElementById("bookoutput").innerHTML = search2;
+                                            
+                                            })
+                                            
+                                        </code>
+                                    </pre>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingFour"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                const fellowshipOfTheRing
+                            </button></h3>
+                            <div class="accordion-collapse collapse" id="collapseFour" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            
+                                            document.getElementById("Hobbitbtn").addEventListener("click", function () {
+
+                                                const book3 = `When Mr. Bilbo Baggins of Bag End announced that he would shortly be celebrating 
+                                                his eleventy-first birthday with a party of special magnificence, there was much talk and excitement 
+                                                in Hobbiton. 
+                                                Bilbo was very rich and very peculiar, and had been the wonder of the Shire for sixty years, ever 
+                                                since his remarkable disappearance and unexpected return. The riches he had brought back from his 
+                                                travels had now become a local legend, and it was popularly believed, whatever the old folk might say, 
+                                                that the Hill at Bag End was full of tunnels stuffed with treasure. And if that was not enough for fame, 
+                                                there was also his prolonged vigour to marvel at. Time wore on, but it seemed to have little effect on Mr. 
+                                                Baggins. At ninety he was much the same as at fifty. At ninety-nine they began to call him well-preserved; 
+                                                but unchanged would have been nearer the mark. There were some that shook their heads and thought this was 
+                                                too much of a good thing; it seemed unfair that anyone should possess (apparently) perpetual youth as well 
+                                                as (reputedly) inexhaustible wealth. 
+                                                &ldquoIt will have to be paid for,&rdquo; they said. &ldquoIt isn’t natural, and trouble will come of it!&rdquo;`;
+                                            
+                                                let search3 = longestWord(book3);
+                                            
+                                                document.getElementById("bookoutput").innerHTML = search3;
+                                            
+                                            })
+                                            
+                                        </code>
+                                    </pre>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingFive"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                const peterPan
+                            </button></h3>
+                            <div class="accordion-collapse collapse" id="collapseFive" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    
+                                    <pre class="line-numbers">
+                                        <code class="language-javascript">
+                                            
+                                            document.getElementById("Peterbtn").addEventListener("click", function () {
+
+                                            const book4 = `All children, except one, grow up. They soon know that they will grow up, 
+                                            and the way Wendy knew was this.
+                                            One day when she was two years old she was playing in a garden, and she plucked another flower 
+                                            and ran with it to her mother.
+                                            I suppose she must have looked rather delightful, for Mrs. Darling put her hand to her heart and 
+                                            cried, “Oh, why can't you remain like this for ever!” This was all that passed between them on the 
+                                            subject, but henceforth Wendy knew that she must grow up. You always know after you are two. 
+                                            Two is the beginning of the end.`;
+
+                                            let search4 = longestWord(book4);
+
+                                            document.getElementById("bookoutput").innerHTML = search4;
+
+                                            })
                                             
                                         </code>
                                     </pre>
@@ -163,9 +267,13 @@
                                 <div class="text-center">
                                     <div class="h6">Have more questions?</div>
                                     <p class="mb-4">
-                                        
+                                        Get in touch through my website!
                                     </p>
-                                    <div class="h6">Contact Me!</div>
+                                    <div class="d-flex justify-content-center">
+                                        <a type="button" href="https://helloshyann.com/#contact" target="_blank" class="btn hvr-pulse-grow btn-outline-dark">
+                                            Contact Me
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

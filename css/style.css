@@ -27,8 +27,8 @@ Shadow - #454360 */
 }
 
 :root {
-    --primary-color: #f95779;
-    --secondary-color: #ffb4c4;
+    --primary-color: #6c6fe5;
+    --secondary-color: #bfc1fe;
     --dark-color: #333;
     --white-color: #f9f9ff;
 }
@@ -44,6 +44,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   
+.modal-title {
+  color: var(--primary-color);
+}
 
 main>.container {
     padding: 60px 15px 0;
@@ -100,10 +103,13 @@ footer .social>a:hover {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px;
+  border-color: var(--secondary-color);
 }
 
 .card-header {
   background-color: var(--secondary-color);
+  border-radius: 5px;
+  border-color: var(--secondary-color);
 }
 
 .techicon {
